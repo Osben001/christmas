@@ -7,7 +7,7 @@ const snowContainer = document.getElementById("snowContainer");
 document.getElementById("surpriseButton").addEventListener("click", () => {
   surpriseMessage.style.display = "block";
   surpriseMessage.innerHTML = `
-    🎅 Ho Ho Ho, Dara! 🎄<br>
+    🎅 Ho Ho Ho, ARI! 🎄<br>
     You're the brightest star of this holiday season! ✨<br>
     Here's to unforgettable moments and all the cookies! 🍪💖
   `;
