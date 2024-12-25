@@ -4,63 +4,78 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    background: #00172a;
+    background: linear-gradient(to bottom, #00172a, #003b5f);
 }
 
-/* Magical Background */
-.background .stars,
-.background .snow,
-.background .twinkling {
+/* Background Effects */
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Snowflakes */
+#snowContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* Floating Ornaments */
+.ornaments {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    background: url('https://i.postimg.cc/TY7PpBGq/christmas-ornaments.png') repeat top center;
+    z-index: 2;
+    animation: ornamentsFloat 10s infinite linear;
 }
 
-.background .stars {
-    background: url('https://i.postimg.cc/1zG98zWz/animated-hearts.png') repeat top center;
-    animation: twinkle 5s infinite linear;
-}
-
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.8;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-.background .snow {
-    background: url('https://i.postimg.cc/J7rYyN96/snowflakes.png') repeat top center;
-    animation: snowfall 20s linear infinite;
-}
-
-@keyframes snowfall {
+@keyframes ornamentsFloat {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translateY(100%);
+        transform: translateY(-10%);
     }
 }
 
-.background .twinkling {
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
-    animation: sparkle 2s infinite ease-in-out;
+/* Twinkling Lights */
+.lights {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.postimg.cc/sXqXQkJd/christmas-lights.png') repeat top center;
+    z-index: 3;
+    animation: lightsTwinkle 3s infinite ease-in-out;
 }
 
-@keyframes sparkle {
+@keyframes lightsTwinkle {
 
     0%,
     100% {
-        opacity: 0.3;
+        opacity: 0.5;
     }
 
     50% {
@@ -106,15 +121,16 @@ body {
     color: #ffd6d6;
 }
 
-/* Surprise Button */
-.surprise-button {
+/* Buttons */
+.action-button {
     background: linear-gradient(90deg, #ff6a00, #ff0000);
     color: #fff;
-    font-size: 1.6rem;
-    padding: 15px 40px;
+    font-size: 1.4rem;
+    padding: 12px 30px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    margin: 10px;
     animation: pulse 2s infinite;
 }
 
@@ -130,7 +146,7 @@ body {
     }
 }
 
-.surprise-button:hover {
+.action-button:hover {
     transform: scale(1.1);
 }
 

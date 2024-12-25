@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Holiday Wishes for You</title>
+    <title>Special Holiday Wishes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Magical Background -->
     <div class="background">
-        <div class="stars"></div>
-        <div class="snow"></div>
-        <div class="twinkling"></div>
+        <div id="snowContainer"></div> <!-- Snowflakes -->
+        <div class="ornaments"></div> <!-- Floating Ornaments -->
+        <div class="lights"></div> <!-- Twinkling Lights -->
     </div>
 
     <!-- Content -->
     <div class="container">
-        <h1 class="main-title">🎄 Merry Christmas, name! 🎅</h1>
-        <h2 class="sub-title">Wishing You the Happiest New Year! 🎉✨</h2>
+        <h1 class="main-title">🎄 Merry Christmas, ARI! 🎅</h1>
+        <h2 class="sub-title">Wishing You the Best New Year! 🎉✨</h2>
         <p class="message">
-            Dear name,<br>
-            May this holiday season bring you joy as bright as the twinkling stars, love as warm as a cozy fireplace,
-            and memories as sweet as holiday treats. You make life magical! 💖
+            Dear ARI,<br>
+            This Christmas, may your heart be as warm as cocoa, your spirit as bright as fairy lights, and your days as
+            magical as snowflakes. You make the season special! 💖
         </p>
 
-        <button id="surpriseButton" class="surprise-button">Click for a Holiday Surprise! 🎁</button>
+        <!-- Buttons -->
+        <button id="surpriseButton" class="action-button">Holiday Surprise! 🎁</button>
+        <button id="snowButton" class="action-button">Let It Snow! ❄️</button>
+        <button id="lightsButton" class="action-button">Glow the Lights! 🌟</button>
+        <button id="musicButton" class="action-button">Play Festive Music 🎶</button>
+        <button id="jokeButton" class="action-button">Tell Me a Joke! 🤣</button>
         <p id="surpriseMessage" class="surprise-message"></p>
     </div>
 
